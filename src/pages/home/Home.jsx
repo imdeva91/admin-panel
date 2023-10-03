@@ -2,6 +2,15 @@ import React from 'react'
 import "./Home.scss"
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
+import Widget from '../../components/widget/Widget';
+import Chart from '../../components/chart/Chart';
+import Featured from '../../components/featured/Featured';
+import Tables from "../../components/table/Tables"
+
+
+
+
+
 
 
 const Home = () => {  
@@ -10,7 +19,21 @@ const Home = () => {
       <Sidebar />
       <div className="homeContainer">
         <Navbar/>
-        home
+        <div className="widgets">
+          <Widget type="user"/>
+          <Widget type="order"/>
+          <Widget type="erarning"/>
+          <Widget type="balance"/>
+
+        </div>
+        <div className="charts">
+          <Featured/>
+          <Chart/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Letest Transection</div>
+          <Tables/>
+        </div>
       </div>
     </div>
   )
